@@ -83,8 +83,7 @@
       padding-bottom: 5px;
     }
 
-    p,
-    ul {
+    p, ul {
       line-height: 1.7;
       font-size: 17px;
     }
@@ -97,7 +96,7 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-    /* TIMELINE SECTION */
+    /* TIMELINE */
     .timeline {
       position: relative;
       margin: 50px 0;
@@ -120,34 +119,16 @@
       animation: fadeIn 1s ease forwards;
     }
 
-    .event:nth-child(1) {
-      animation-delay: 0.3s;
-    }
-    .event:nth-child(2) {
-      animation-delay: 0.6s;
-    }
-    .event:nth-child(3) {
-      animation-delay: 0.9s;
-    }
-    .event:nth-child(4) {
-      animation-delay: 1.2s;
-    }
-    .event:nth-child(5) {
-      animation-delay: 1.5s;
-    }
-    .event:nth-child(6) {
-      animation-delay: 1.8s;
-    }
+    .event:nth-child(1) { animation-delay: 0.3s; }
+    .event:nth-child(2) { animation-delay: 0.6s; }
+    .event:nth-child(3) { animation-delay: 0.9s; }
+    .event:nth-child(4) { animation-delay: 1.2s; }
+    .event:nth-child(5) { animation-delay: 1.5s; }
+    .event:nth-child(6) { animation-delay: 1.8s; }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .event::before {
@@ -165,12 +146,8 @@
     }
 
     @keyframes glow {
-      from {
-        box-shadow: 0 0 6px 2px #a67c52;
-      }
-      to {
-        box-shadow: 0 0 15px 4px #ffcc7a;
-      }
+      from { box-shadow: 0 0 6px 2px #a67c52; }
+      to { box-shadow: 0 0 15px 4px #ffcc7a; }
     }
 
     .event:hover {
@@ -198,6 +175,7 @@
       line-height: 1.6;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       main {
         margin: 130px 10px 40px;
@@ -222,6 +200,7 @@
       header h1 {
         font-size: 26px;
       }
+
       nav a {
         margin: 5px;
         display: inline-block;
@@ -237,9 +216,52 @@
       border-top: 4px solid #a67c52;
       box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
     }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* REFERENCES */
+    #references {
+      background: rgba(255, 250, 240, 0.96);
+      border: 2px solid #a67c52;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 30px 25px;
+    }
+
+    #references h2 {
+      color: #4b2e05;
+      text-align: center;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #a67c52;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    #references ul {
+      list-style-type: square;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #3b2d1f;
+    }
+
+    #references a {
+      color: #a67c52;
+      text-decoration: none;
+    }
+
+    #references a:hover {
+      text-decoration: underline;
+      color: #d2b48c;
+    }
   </style>
 </head>
+
 <body>
+  <!-- HEADER -->
   <header>
     <h1>World War II</h1>
     <p>The Global Conflict that Changed History (1939–1945)</p>
@@ -248,9 +270,11 @@
       <a href="#timeline">Timeline</a>
       <a href="#aftermath">Aftermath</a>
       <a href="#about">About</a>
+      <a href="#references">References</a>
     </nav>
   </header>
 
+  <!-- MAIN -->
   <main>
     <section id="overview">
       <h2>Overview</h2>
@@ -270,10 +294,7 @@
           <img src="1.webp" alt="Invasion of Poland" />
           <div class="event-info">
             <h3>1939 – Invasion of Poland</h3>
-            <p>
-              Germany invades Poland, beginning the war. Britain and France
-              declare war on Germany shortly after.
-            </p>
+            <p>Germany invades Poland, beginning the war. Britain and France declare war on Germany shortly after.</p>
           </div>
         </div>
 
@@ -281,10 +302,7 @@
           <img src="https://cdn.theatlantic.com/media/img/photo/2011/07/world-war-ii-the-battle-of-britain/w02_141-0678/main_900.jpg" alt="Battle of Britain" />
           <div class="event-info">
             <h3>1940 – Battle of Britain</h3>
-            <p>
-              Britain resists heavy German air raids, marking the first major
-              defeat of Hitler’s military forces.
-            </p>
+            <p>Britain resists heavy German air raids, marking the first major defeat of Hitler’s forces.</p>
           </div>
         </div>
 
@@ -292,10 +310,7 @@
           <img src="3.webp" alt="Pearl Harbor" />
           <div class="event-info">
             <h3>1941 – Attack on Pearl Harbor</h3>
-            <p>
-              Japan attacks the U.S. naval base in Hawaii, drawing the United
-              States into the war.
-            </p>
+            <p>Japan attacks the U.S. naval base in Hawaii, drawing the United States into the war.</p>
           </div>
         </div>
 
@@ -303,10 +318,7 @@
           <img src="4.jpg" alt="Battle of Stalingrad" />
           <div class="event-info">
             <h3>1942–43 – Battle of Stalingrad</h3>
-            <p>
-              The Soviet Union halts German advance, a major turning point on
-              the Eastern Front.
-            </p>
+            <p>The Soviet Union halts German advance, marking a major turning point on the Eastern Front.</p>
           </div>
         </div>
 
@@ -314,10 +326,7 @@
           <img src="3.webp" alt="D-Day" />
           <div class="event-info">
             <h3>1944 – D-Day Invasion</h3>
-            <p>
-              Allied troops land in Normandy, France, beginning the liberation
-              of Europe from Nazi control.
-            </p>
+            <p>Allied troops land in Normandy, France, beginning the liberation of Europe from Nazi control.</p>
           </div>
         </div>
 
@@ -325,10 +334,7 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Atomic_bombing_of_Japan.jpg" alt="Atomic Bomb" />
           <div class="event-info">
             <h3>1945 – End of the War</h3>
-            <p>
-              Germany surrenders in May. Atomic bombs dropped on Hiroshima and
-              Nagasaki lead to Japan’s surrender.
-            </p>
+            <p>Germany surrenders in May. Atomic bombs dropped on Hiroshima and Nagasaki lead to Japan’s surrender.</p>
           </div>
         </div>
       </div>
@@ -338,9 +344,7 @@
       <h2>Aftermath</h2>
       <div class="highlight">
         <p>
-          The war ended in 1945 with over 60 million casualties. The United
-          Nations was formed, colonial empires began to fall, and the Cold War
-          between the U.S. and Soviet Union began.
+          The war ended in 1945 with over 60 million casualties. The United Nations was formed, colonial empires began to fall, and the Cold War between the U.S. and Soviet Union began.
         </p>
       </div>
     </section>
@@ -348,38 +352,40 @@
     <section id="about">
       <h2>About Me ☺️</h2>
       <p>
-        Konnichiwa! I'm Alexa Joy Macadaeg, a grade 11 STEM student. I created this webpage for our school performance and also to help students and readers learn about World War II in a simple and easy-to-understand way.
-        The purpose of this website is to share basic knowledge about one of the most important events in history. World War II reminds us about the value of peace, unity, and freedom. Through this page, I hope people, especially the youth like me, will remember the sacrifices made during the war and understand how it changed the world we live in today.
-        <br>Email: macadaegalexajoy@gmail.com
-        <br>Facebook: Alexa Joy Macadaeg
+        Konnichiwa! I'm <strong>Alexa Joy Macadaeg</strong>, a Grade 11 STEM student.  
+        I created this webpage for our school performance and also to help students and readers learn about World War II in a simple and easy-to-understand way.  
+        The purpose of this website is to share basic knowledge about one of the most important events in history.  
+        <br><br>
+        World War II reminds us about the value of peace, unity, and freedom. Through this page, I hope people—especially the youth like me—will remember the sacrifices made during the war and understand how it changed the world we live in today.
+        <br><br>
+        📧 Email: <a href="mailto:macadaegalexajoy@gmail.com" style="color:#a67c52;">macadaegalexajoy@gmail.com</a><br>
+        📘 Facebook: <a href="https://www.facebook.com/lvxahm" target="_blank" style="color:#a67c52;">Alexa Joy Macadaeg</a>
       </p>
     </section>
   </main>
 
- Alexa Joy
-</div>
-    </main>
-    <footer>
-    <p style="font-size: 18px; letter-spacing: 1px;">
-         <strong style="color: #d2b48c;">Created with stress by</strong> 
-        <span style="font-family: 'Georgia', serif; font-size: 20px; color: #f5deb3; text-shadow: 1px 1px 3px #000;">
-            Alexa Joy Macadaeg
-        </span> 
-    </p>
-    <p style="font-size: 14px; color: #e0d8c3;">© 2025 | Honoring History, Remembering the Past</p>
-</footer>
+  <!-- REFERENCES -->
+  <section id="references">
+    <h2>References</h2>
+    <ul>
+      <li><a href="https://www.britannica.com/event/Invasion-of-Poland" target="_blank">Invasion of Poland</a> — Encyclopaedia Britannica.</li>
+      <li><a href="https://www.britannica.com/event/Battle-of-Britain-European-history-1940" target="_blank">Battle of Britain</a> — Encyclopaedia Britannica.</li>
+      <li><a href="https://www.britannica.com/event/Pearl-Harbor-attack" target="_blank">Pearl Harbor</a> — Encyclopaedia Britannica.</li>
+      <li><a href="https://www.britannica.com/event/Battle-of-Stalingrad" target="_blank">Battle of Stalingrad</a> — Encyclopaedia Britannica.</li>
+      <li><a href="https://www.britannica.com/event/D-Day-Invasion" target="_blank">D-Day Invasion</a> — Encyclopaedia Britannica.</li>
+      <li><a href="https://www.nationalww2museum.org/war/topics/end-world-war-ii-1945" target="_blank">End of World War II</a> — National WWII Museum.</li>
+    </ul>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <p style="font-size:18px; letter-spacing:1px;">
+      <strong style="color:#d2b48c;">Created with stress by</strong>
+      <span style="font-family:'Georgia',serif; font-size:20px; color:#f5deb3; text-shadow:1px 1px 3px #000;">
+        Alexa Joy Macadaeg
+      </span>
+    </p>
+    <p style="font-size:14px; color:#e0d8c3;">© 2025 | Honoring History, Remembering the Past</p>
+  </footer>
 </body>
 </html>
-<section id="references" style="max-width:900px; margin:40px auto 0; background:rgba(255,250,240,0.96); border-radius:14px; box-shadow:0 0 25px rgba(0,0,0,0.7); border:2px solid #a67c52; padding:30px 25px;">
-  <h2 style="color:#4b2e05; text-align:center; margin-bottom:20px; border-bottom:2px solid #a67c52; display:inline-block; padding-bottom:5px;">References</h2>
-  <ul style="font-size:17px; line-height:1.7; color:#3b2d1f;">
-    <li><a href="https://www.britannica.com/event/Invasion-of-Poland" target="_blank" style="color:#a67c52;">Invasion of Poland</a>. Encyclopaedia Britannica.</li>
-    <li><a href="https://www.britannica.com/event/Battle-of-Britain-European-history-1940" target="_blank" style="color:#a67c52;">Battle of Britain</a>. Encyclopaedia Britannica.</li>
-    <li><a href="https://www.britannica.com/event/Pearl-Harbor-attack" target="_blank" style="color:#a67c52;">Pearl Harbor</a>. Encyclopaedia Britannica.</li>
-    <li><a href="https://www.britannica.com/event/Battle-of-Stalingrad" target="_blank" style="color:#a67c52;">Battle of Stalingrad</a>. Encyclopaedia Britannica.</li>
-    <li><a href="https://www.britannica.com/event/D-Day-Invasion" target="_blank" style="color:#a67c52;">D-Day Invasion</a>. Encyclopaedia Britannica.</li>
-    <li><a href="https://www.nationalww2museum.org/war/topics/end-world-war-ii-1945" target="_blank" style="color:#a67c52;">End of World War II</a>. National WWII Museum.</li>
-
-  </ul>
-</section>
